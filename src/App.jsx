@@ -11,7 +11,7 @@ const App = () => {
       <div className="app">
         <Hero />
         <Demo />
-        <script src="https://cdn.popupsmart.com/bundle.js" data-id="869634" async defer></script>
+       
       </div>
     </main>
   );
