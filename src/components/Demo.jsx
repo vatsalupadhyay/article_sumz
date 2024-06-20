@@ -38,7 +38,6 @@ const Demo = () => {
     }
   };
 
-
   const handleCopy = (copyUrl) => {
     setCopied(copyUrl);
     navigator.clipboard.writeText(copyUrl);
@@ -50,10 +49,6 @@ const Demo = () => {
       handleSubmit(e);
     }
   };
-
-
-
-
   return (
     <section className="mt-16  w-full max-w-xl">
       {}
@@ -81,7 +76,7 @@ const Demo = () => {
             className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700"
             type="submit"
           >
-          <img src = {tick} />
+            <img src={tick} />
           </button>
         </form>
 
@@ -105,26 +100,26 @@ const Demo = () => {
           ))}
         </div>
       </div>
-{/*display */}
-<div className='my-10 max-w-full flex justify-center items-center'>
+      {/*display */}
+      <div className="my-10 max-w-full flex justify-center items-center">
         {isFetching ? (
-          <img src={loader} alt='loader' className='w-20 h-20 object-contain' />
+          <img src={loader} alt="loader" className="w-20 h-20 object-contain" />
         ) : error ? (
-          <p className='font-inter font-bold text-black text-center'>
+          <p className="font-inter font-bold text-black text-center">
             Well, that wasn't supposed to happen...
             <br />
-            <span className='font-satoshi font-normal text-gray-700'>
+            <span className="font-satoshi font-normal text-gray-700">
               {error?.data?.error}
             </span>
           </p>
         ) : (
           article.summary && (
-            <div className='flex flex-col gap-3'>
-              <h2 className='font-satoshi font-bold text-gray-600 text-xl'>
-                Article <span className='blue_gradient'>Summary</span>
+            <div className="flex flex-col gap-3">
+              <h2 className="font-satoshi font-bold text-gray-600 text-xl">
+                Article <span className="blue_gradient">Summary</span>
               </h2>
-              <div className='summary_box'>
-                <p className='font-inter font-medium text-sm text-gray-700'>
+              <div className="summary_box">
+                <p className="font-inter font-medium text-sm text-gray-700">
                   {article.summary}
                 </p>
               </div>
